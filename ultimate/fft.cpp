@@ -104,7 +104,7 @@ namespace FFT
     {
         base = 1;
         N = 2;
-        while (N <= n1 + n2) base++, N <<= 1;
+        while (N < n1 + n2) base++, N <<= 1;
 
         for (int i = n1; i < N; ++i) A[i] = 0;
         for (int i = n2; i < N; ++i) B[i] = 0;
