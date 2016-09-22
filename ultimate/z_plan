@@ -1,0 +1,58 @@
+math:
+ + рациональные числа
+ + генератор простых (и проверка на простоту)
+ - возведение матрицы в степень за лог
+ - расширенный алгоритм Евклида
+ ? китайская теорема об остатках
+   мелочи:
+    - обратный-по-модулю-в-одну-строчку
+    - нахождение phi
+
+
+geom:
+ + point (dbl, ll)
+ - line (dbl)
+ - convex hull
+ ? segment
+ ? circle
+ ? triangle (разные функции, например центр описанной окружности)
+ ? трехмерный геом
+ ? пересечение полуплоскостей
+ ? SVG для отрисовки всего
+
+
+
+graph:
+ + hungary
+ + dinica
+ + max-flow-min-cost
+ - lca
+ ? centroid decomposition
+ ? два китайца
+ ? heavy-light
+
+
+other:
+ + fft
+ + fastIO
+ + std_RB_tree
+ - fft_blackbox (итеративное fft)
+ ? битсеты, __Find_first, __Find_next
+
+string:
+ + pi-func
+ + z-func
+ - suffix array
+ - suffix automata
+ - ахо-корасик
+ ? suffix tree
+ ? дерево палиндромов
+
+
+data_structures:
+ - декартово дерево
+ ? дерево отрезков
+ ? дерево фенвика
+ ? sparse table
+
+
