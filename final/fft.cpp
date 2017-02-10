@@ -1,4 +1,4 @@
-namespace FFT
+namespace fft
 {
     const int maxBase = 21;
     const int maxN = 1 << maxBase;

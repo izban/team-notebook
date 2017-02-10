@@ -51,5 +51,5 @@ namespace hungary
     // -- to restore permutation use ans[]
     // -- everything works on negative numbers
     //
-    // !! i don't understand this code, it's copypasted from e-maxx (and rewrited by me)
+    // !! i don't understand this code, it's copypasted from e-maxx (and rewrited by enot110)
 }
