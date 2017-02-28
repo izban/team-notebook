@@ -1,0 +1,26 @@
+map <F9> :wall! <CR> :!g++ -Wall -Wextra -std=c++14 -o %:r % -D_GLIBCXX_DEBUG -fsanitize=address -DHOME -Wshadow -Wno-unused-result <CR>
+map <F7> :wall! <CR> :!g++ -Wall -Wextra -std=c++14 -o %:r % -O2 -DHOME -Wshadow -Wno-unused-result  <CR>
+map <F8> :wall! <CR> :!./%:r <CR>
+
+inoremap {<CR> {<CR>}<ESC>O
+inoremap <c-p> {
+map <c-a> ggVG
+
+set nu
+set rnu
+syntax on
+
+map <c-t> :tabnew <CR>
+map <c-l> :tabn <CR>
+map <c-h> :tabp <CR>
+
+set cin
+set sw=4
+set so=99
+set bs=2
+set et
+set sts=4
+
+
+
+
