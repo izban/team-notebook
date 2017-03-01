@@ -1,0 +1,29 @@
+\documentclass[landscape,twocolumn,letterpaper]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{comment}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\begin{document}
+
+
+\lstset{language=C++,
+                breaklines=true,
+                basicstyle=\ttfamily,
+                keywordstyle=\color{blue}\ttfamily,
+                stringstyle=\color{red}\ttfamily,
+                commentstyle=\color{green}\ttfamily,
+                morecomment=[l][\color{magenta}]{\#}
+}
+
+Суффиксный автомат с деревом:
+
+\lstinputlisting{final/sufAutomaton.cpp}
+
+
+%\end{landscape}
+\end{document}
