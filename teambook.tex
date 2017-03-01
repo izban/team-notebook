@@ -1,0 +1,40 @@
+\documentclass[portrait,twocolumn,letterpaper]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{comment}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{titlesec, blindtext, color}
+
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=15mm,
+ top=15mm,
+ }
+
+
+\begin{document}
+
+\lstset{language=C++,
+                breaklines=true,
+                basicstyle=\ttfamily,
+                keywordstyle=\color{blue}\ttfamily,
+                stringstyle=\color{red}\ttfamily,
+                commentstyle=\color{green}\ttfamily,
+                morecomment=[l][\color{magenta}]{\#}
+}
+
+
+\section{1: Суффиксный автомат}
+
+\lstinputlisting{final/sufAutomaton.cpp}
+
+
+%\end{landscape}
+\end{document}
