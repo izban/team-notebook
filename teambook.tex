@@ -8,18 +8,22 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{titlesec, blindtext, color}
-
+%\setlength{\columnseprule}{0.4pt}
+\setlength{\columnsep}{10pt}
 
 \usepackage{geometry}
  \geometry{
  a4paper,
- total={170mm,257mm},
- left=15mm,
- top=15mm,
+ %total={170mm,257mm},
+ left=10mm,
+ top=10mm,
+ right=10mm,
+ bottom=10mm,
  }
 
 
 \begin{document}
+\fontsize{8}{11}\selectfont
 
 \lstset{language=C++,
                 breaklines=true,
@@ -27,13 +31,79 @@
                 keywordstyle=\color{blue}\ttfamily,
                 stringstyle=\color{red}\ttfamily,
                 commentstyle=\color{green}\ttfamily,
-                morecomment=[l][\color{magenta}]{\#}
+                morecomment=[l][\color{magenta}]{\#},
+                numbers=left,
+                numbersep=0pt,
+                literate={\ \ }{{\ }}1
 }
 
 
-\section{1: Суффиксный автомат}
+\section{crt}
+\lstinputlisting{musthave/crt.cpp}
 
-\lstinputlisting{final/sufAutomaton.cpp}
+\section{fastIO}
+\lstinputlisting{musthave/fastIO.cpp}
+
+\section{fft}
+\lstinputlisting{musthave/fft.cpp}
+
+\section{fftint}
+\lstinputlisting{musthave/fftint.cpp}
+
+\section{halfplaneIntersection}
+\lstinputlisting{musthave/halfplaneIntersection.cpp}
+
+\section{hash\_table}
+\lstinputlisting{musthave/hash_table.cpp}
+
+\section{hungary}
+\lstinputlisting{musthave/hungary.cpp}
+
+\section{modReverseOneLine}
+\lstinputlisting{musthave/modReverseOneLine.cpp}
+
+\section{optimizations}
+\lstinputlisting{musthave/optimizations.cpp}
+
+\section{plane3DInt}
+\lstinputlisting{musthave/plane3DInt.cpp}
+
+\section{simplex}
+\lstinputlisting{musthave/simplex.cpp}
+
+\section{std\_rb\_tree}
+\lstinputlisting{musthave/std_rb_tree.cpp}
+
+\section{sufAutomaton}
+\lstinputlisting{musthave/sufAutomaton.cpp}
+
+
+\section{Суффиксный автомат}
+\lstinputlisting{musthave/sufAutomaton.cpp}
+
+\section{template}
+\lstinputlisting{musthave/template.cpp}
+
+\section{vimrc}
+\lstinputlisting{musthave/vimrc.txt}
+
+\section{dinica}
+\lstinputlisting{useful/dinica.cpp}
+
+\section{fastcnk}
+\lstinputlisting{useful/fastcnk.cpp}
+
+\section{max-flow-min-cost}
+\lstinputlisting{useful/max-flow-min-cost.cpp}
+
+\section{poly}
+\lstinputlisting{useful/poly.cpp}
+
+\section{primes}
+\lstinputlisting{useful/primes.cpp}
+
+
+
 
 
 %\end{landscape}
