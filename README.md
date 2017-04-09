@@ -1,6 +1,3 @@
 # team-notebook
 
-final <-- все что мастхев в тимбуке
-
-trash <-- все что будет полезно если будет место
-
+![wow](http://i.imgur.com/mPSXGXM.jpg)
