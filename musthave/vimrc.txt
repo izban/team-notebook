@@ -1,5 +1,5 @@
-map <F9> :wall! <CR> :!g++ -Wall -Wextra -Wshadow -Wno-unused-result -o %:r % -std=c++14 -DHOME -D_GLIBCXX_DEBUG -fsanitize=address  <CR>
-map <F7> :wall! <CR> :!g++ -Wall -Wextra -Wshadow -Wno-unused-result -o %:r % -std=c++14 -DHOME -O2    <CR>
+map <F9> :wall! <CR> :!g++ -Wall -Wextra -Wshadow -Wno-unused-result -o %:r % -std=c++14 -DHOME -D_GLIBCXX_DEBUG -fsanitize=address <CR>
+map <F7> :wall! <CR> :!g++ -Wall -Wextra -Wshadow -Wno-unused-result -o %:r % -std=c++14 -DHOME -O2 <CR>
 map <F8> :wall! <CR> :!./%:r <CR>
 
 inoremap {<CR> {<CR>}<ESC>O
