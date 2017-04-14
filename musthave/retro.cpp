@@ -11,41 +11,34 @@ namespace retro
         vrev[y].pb(x);
     }
 
+    const int UD = 0;
+    const int WIN = 1;
+    const int LOSE = 2;
+
     int res[N];
     int moves[N];
-    int deg[N], used[N];
+    int deg[N];
     int q[N], st, en;
 
     void calc(int n)
     {
-        forn(i, n) res[i] = -1, deg[i] = sz(v[i]), moves[i] = inf;
+        forn(i, n) deg[i] = sz(v[i]);
         st = en = 0;
         forn(i, n) if (!deg[i])
         {
-            res[i] = 0;
             q[en++] = i;
-            moves[i] = 0;
+            res[i] = LOSE;
         }
         while (st < en)
         {
             int x = q[st++];
             for (int y : vrev[x])
             {
-                moves[y] = min(moves[y], moves[x] + 1);
-                res[y] = 1;
-                if (!used[y])
+                if (res[y] == UD && (res[x] == LOSE || (--deg[y] == 0 && res[x] == WIN)))
                 {
-                    used[y] = 1;
-                    for (int z : vrev[y])
-                    {
-                        deg[z]--;
-                        if (!deg[z])
-                        {
-                            res[z] = 0;
-                            q[en++] = z;
-                            moves[z] = moves[y] + 1;
-                        }
-                    }
+                    res[y] = 3 - res[x];
+                    moves[y] = moves[x] + 1;
+                    q[en++] = y;
                 }
             }
         }
