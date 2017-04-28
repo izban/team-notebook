@@ -114,6 +114,7 @@ struct Simplex {
     // -- max: c * x
     // -- b[i] >= a[i] * x
     // -- answer in "v"
+    // -- sertificate in "res"
 };
 
    
