@@ -108,6 +108,15 @@ struct Simplex {
             }
         } 
     }
+     // HOW TO USE ::
+    // -- variables in "up" equals to zero 
+    // -- variables in "left" equals to b
+    // -- max: c * x
+    // -- b[i] >= a[i] * x
+    // -- answer in "v"
 };
+
+   
+
 
 
