@@ -1,5 +1,7 @@
 
 namespace simplex {
+    const int MAX_N = -1; // number of variables
+    const int MAX_M = -1; // number of inequalities
     dbl a[MAX_M][MAX_N];
     dbl b[MAX_M];
     dbl c[MAX_N];
