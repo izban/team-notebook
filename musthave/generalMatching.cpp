@@ -1,3 +1,4 @@
+//COPYPASTED FROM E-MAXX
 namespace GeneralMatching {
     const int MAXN = 256;
     int n;
