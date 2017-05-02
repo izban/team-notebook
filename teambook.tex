@@ -9,34 +9,77 @@
 \usepackage{xcolor}
 \usepackage{titlesec, blindtext, color}
 %\setlength{\columnseprule}{0.4pt}
-\setlength{\columnsep}{10pt}
+\setlength{\columnsep}{25pt}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{lastpage}
 
 \usepackage{geometry}
  \geometry{
  a4paper,
  %total={170mm,257mm},
  left=10mm,
- top=10mm,
+ top=20mm,
  right=10mm,
- bottom=10mm,
+ bottom=13mm,
  }
+ 
+\newlength\FHoffset
+\setlength\FHoffset{0mm}
+\addtolength\headwidth{2\FHoffset}
+\fancyheadoffset{\FHoffset}
+
+\lhead{ACM ICPC WORLD FINALS}
+\chead{ITMO UNIVERSITY }
+\rhead{Page \thepage of \pageref{LastPage}}
 
 
 \begin{document}
 \fontsize{8}{11}\selectfont
-
-\lstset{language=C++,
-                breaklines=true,
-                basicstyle=\ttfamily,
-                keywordstyle=\color{blue}\ttfamily,
-                stringstyle=\color{red}\ttfamily,
-                commentstyle=\color{green}\ttfamily,
-                morecomment=[l][\color{magenta}]{\#},
-                numbers=left,
-                numbersep=0pt,
-                literate={\ \ }{{\ }}1
+%\lstset{language=C++,
+%                breaklines=true,
+%                basicstyle=\ttfamily,
+%                keywordstyle=\color{blue}\ttfamily,
+%                stringstyle=\color{red}\ttfamily,
+%                commentstyle=\color{green}\ttfamily,
+%                morecomment=[l][\color{magenta}]{\#},
+%                numbers=left,
+%                numbersep=0pt,
+%                literate={\ \ }{{\ }}1
+%}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\lstset{
+		%backgroundcolor=\color{lbcolor},
+    	tabsize=2,    
+    	language=[GNU]C++,
+        basicstyle=\scriptsize,
+        aboveskip={1.5\baselineskip},
+        columns=fixed,
+        showstringspaces=false,
+        extendedchars=false,
+        breaklines=true,
+        prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+        frame=single,
+        numbers=left,
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        identifierstyle=\ttfamily,
+        keywordstyle=\color[rgb]{0,0,1},
+        %commentstyle=\color[rgb]{0.026,0.112,0.095},
+        commentstyle=\color[rgb]{0.200,0.800,0.200},
+        stringstyle=\color[rgb]{0.627,0.126,0.941},
+        numberstyle=\color[rgb]{0.205, 0.142, 0.73},
+        literate={\ \ }{{\ }}1
 }
 
+
+\section{vimrc}
+\lstinputlisting{musthave/vimrc.txt}
+
+\section{template}
+\lstinputlisting{musthave/template.cpp}
 
 \section{crt}
 \lstinputlisting{musthave/crt.cpp}
@@ -49,6 +92,9 @@
 
 \section{fftint}
 \lstinputlisting{musthave/fftint.cpp}
+
+\section{blackbox}
+\lstinputlisting{musthave/blackbox.cpp}
 
 \section{halfplaneIntersection}
 \lstinputlisting{musthave/halfplaneIntersection.cpp}
@@ -73,25 +119,15 @@
 
 \section{std\_rb\_tree}
 \lstinputlisting{musthave/std_rb_tree.cpp}
-
-\section{sufAutomaton}
-\lstinputlisting{musthave/sufAutomaton.cpp}
-
-
+ 
 \section{Суффиксный автомат}
 \lstinputlisting{musthave/sufAutomaton.cpp}
-
-\section{template}
-\lstinputlisting{musthave/template.cpp}
-
-\section{vimrc}
-\lstinputlisting{musthave/vimrc.txt}
 
 \section{dinica}
 \lstinputlisting{useful/dinica.cpp}
 
-\section{fastcnk}
-\lstinputlisting{useful/fastcnk.cpp}
+%\section{fastcnk}
+%\lstinputlisting{useful/fastcnk.cpp}
 
 \section{max-flow-min-cost}
 \lstinputlisting{useful/max-flow-min-cost.cpp}
@@ -99,11 +135,11 @@
 \section{poly}
 \lstinputlisting{useful/poly.cpp}
 
-\section{primes}
-\lstinputlisting{useful/primes.cpp}
+%\section{primes}
+%\lstinputlisting{useful/primes.cpp}
 
-
-
+\section{retro}
+\lstinputlisting{musthave/retro.cpp}
 
 
 %\end{landscape}
