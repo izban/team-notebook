@@ -1,36 +1,28 @@
-/**                        
- * Author: Sergey Kopeliovich (Burunduk30@gmail.com)
- */
-
-#include <bits/stdc++.h>
-
-using namespace std;
-
+// original author: burunduk1, rewritten by me (enot110)
+// !!! warning !!! this code is not tested well
 const int N = 1e5, K = 17;
 
-int q, n, centroid, color[N], level[N], parent[N];
-vector<int> c[N];
+int pivot, level[N], parent[N];
+vector<int> v[N];
 
-int get_centroid( int v, int p, int n ) {
+int get_pivot( int x, int xx, int n ) {
     int size = 1;
-    for (int x : c[v])
-        if (x != p && level[x] == -1)
-            size += get_centroid(x, v, n);
-    if (centroid == -1 && (size * 2 >= n || p == -1))
-        centroid = v;
+    for (int y : v[x])
+    {
+        if (y != xx && level[y] == -1) size += get_pivot(y, x, n);
+    }
+    if (pivot == -1 && (size * 2 >= n || xx == -1)) pivot = x;
     return size;
 }
 
-void build( int v, int p, int dep, int size ) {
+void build( int x, int xx, int dep, int size ) {
     assert(dep < K);
-    centroid = -1;
-    get_centroid(v, -1, size);
-    int C = centroid;
-    level[C] = dep, parent[C] = p;
-    for (int x : c[C])
-        if (level[x] == -1)
-            build(x, C, dep + 1, size / 2);
+    pivot = -1;
+    get_pivot(x, -1, size);
+    x = pivot;
+    level[x] = dep, parent[x] = xx;
+    for (int y : v[x]) if (level[y] == -1)
+    {
+        build(y, x, dep + 1, size / 2);
+    }
 }
-
-memset(level, -1, sizeof(level));
-build(0, -1, 0, n);
