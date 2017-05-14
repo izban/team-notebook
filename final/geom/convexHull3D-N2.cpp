@@ -48,3 +48,10 @@ vector<Plane> convexHull3(vector<pt> p) {
     return res;
 }
 
+// plane in 3d
+//(A, v) * (B, u) -> (O, n)
+
+pt n = v * u;
+pt m = v * n;
+double t = (B - A) % u / (u % m);
+pt O = A - m * t;
