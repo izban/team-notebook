@@ -8,7 +8,7 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{titlesec, blindtext, color}
-\usepackage{graphicx}
+\usepackage{graphicx,epstopdf}
 
 %\setlength{\columnseprule}{0.4pt}
 \setlength{\columnsep}{25pt}
@@ -64,3 +64,19 @@
         numberstyle=\color[rgb]{0.205, 0.142, 0.73},
         literate={\ \ }{{\ }}1
 }
+
+
+\makeatletter 
+\newcommand\saferead[1]{% 
+\bgroup 
+\let\do\@makeother 
+\dospecials\catcode`\ 10 
+\input{#1}% 
+\egroup 
+} 
+\makeatother
+
+\epstopdfsetup{suffix=}
+\DeclareGraphicsExtensions{.ps}
+\DeclareGraphicsRule{.ps}{pdf}{.pdf}{`ps2pdf -dEPSCrop -dNOSAFER #1 \noexpand\OutputFile}
+
