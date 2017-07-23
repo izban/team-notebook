@@ -10,6 +10,10 @@ namespace math {
     char ispr[N];
     vector<int> pr;
 
+    void add(int &a, int b) {
+        a = (a + b) % MOD;
+    }
+
     int getC(int n, int k) {
         if (k < 0 || n < k || n < 0) return 0;
         return 1LL * fct[n] * ofct[k] % MOD * ofct[n - k] % MOD;
