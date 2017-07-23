@@ -64,13 +64,15 @@ namespace math {
     }
 }
 
+using namespace math;
+
 int main() {
 #ifdef HOME
     freopen("in", "r", stdin);
 #endif
 
-    math::init();
-
+    init();
+    
 #ifdef HOME
     cerr << "time: " << clock() / (double)CLOCKS_PER_SEC << endl;
 #endif
