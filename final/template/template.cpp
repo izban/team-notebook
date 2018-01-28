@@ -4,9 +4,11 @@
 #define F first
 #define S second
 #define pb push_back
-#define forn(i, n) for(int i = 0 ; (i) < (n) ; ++i)
-#define eprintf(...) fprintf(stderr, __VA_ARGS__),fflush(stderr)
-#define sz(a) ((int)(a).size())
+#define sz(a) (int)(a).size()
+#define db(x) cerr << #x << " = " << x << endl
+#define db2(x, y) cerr << "(" << #x << ", " << #y << ") = (" << x << ", " << y << ")\n";
+#define db3(x, y, z) cerr << "(" << #x << ", " << #y << ", " << #z << ") = (" << x << ", " << y << ", " << z << ")\n"
+#define dbv(a) cerr << #a << " = "; for (auto xxxx: a) cerr << xxxx << " "; cerr << endl
 #define all(a) (a).begin(),a.end()
 #define pw(x) (1LL<<(x))
 
@@ -14,34 +16,22 @@ using namespace std;
 
 typedef long long ll;
 typedef double dbl;
-typedef vector<int> vi;
-typedef pair<int, int> pi;
-
 const int INF = 1.01e9;
-const dbl eps = 1e-9;
-
-/* --- main part --- */
 
 
 
-
-
-
-
-int main()
-{
+int main() {
 #define TASK ""
-#ifdef home
+#ifdef HOME 
     assert(freopen(TASK".in", "r", stdin));
-    //assert(freopen(TASK".out", "w", stdout));
 #endif
 
 
-    
 
-    
-#ifdef home
-    eprintf("time = %d ms\n", (int)(clock() * 1000. / CLOCKS_PER_SEC));
+
+
+#ifdef HOME 
+    cerr << "time:  " << clock() * 1.0 / CLOCKS_PER_SEC << endl;
 #endif
     return 0;
 }
