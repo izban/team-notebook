@@ -5,12 +5,13 @@
 #define S second
 #define pb push_back
 #define sz(a) (int)(a).size()
+#define all(a) (a).begin(),a.end()
+#define pw(x) (1LL<<(x))
+
 #define db(x) cerr << #x << " = " << x << endl
 #define db2(x, y) cerr << "(" << #x << ", " << #y << ") = (" << x << ", " << y << ")\n";
 #define db3(x, y, z) cerr << "(" << #x << ", " << #y << ", " << #z << ") = (" << x << ", " << y << ", " << z << ")\n"
 #define dbv(a) cerr << #a << " = "; for (auto xxxx: a) cerr << xxxx << " "; cerr << endl
-#define all(a) (a).begin(),a.end()
-#define pw(x) (1LL<<(x))
 
 using namespace std;
 
@@ -25,7 +26,6 @@ int main() {
 #ifdef HOME 
     assert(freopen(TASK".in", "r", stdin));
 #endif
-
 
 
 
