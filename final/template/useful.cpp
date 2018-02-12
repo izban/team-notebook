@@ -7,3 +7,8 @@ template <typename K, typename V> using ordered_map = tree<K, V, less<K>, rb_tre
 // HOW TO USE ::
 // -- order_of_key(10) returns the number of elements in set/map strictly less than 10
 // -- *find_by_order(10) returns 10-th smallest element in set/map (0-based)
+
+bitset<N> a;
+for (int i = a._Find_first(); i != a.size(); i = a._Find_next(i)) {
+    cout << i << endl;
+}

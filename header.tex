@@ -80,3 +80,7 @@
 \DeclareGraphicsExtensions{.ps}
 \DeclareGraphicsRule{.ps}{pdf}{.pdf}{`ps2pdf -dEPSCrop -dNOSAFER #1 \noexpand\OutputFile}
 
+%\titleformat*{\section}{\Small}
+\addtocontents{toc}{\protect\enlargethispage{\baselineskip}}
+
+
