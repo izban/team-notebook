@@ -3,6 +3,8 @@
 
 #define F first
 #define S second
+#define X first
+#define Y second
 #define pb push_back
 #define sz(a) (int)(a).size()
 #define all(a) (a).begin(),a.end()
