@@ -10,10 +10,10 @@ namespace fft
 
     void init()
     {
-        forn(i, N) rev[i] = (rev[i >> 1] >> 1) + ((i & 1) << (base - 1));
+        for (int i = 0; i < N; i++) rev[i] = (rev[i >> 1] >> 1) + ((i & 1) << (base - 1));
         int NN = N >> 1;
         int z = 1;
-        forn(i, NN)
+        for (int i = 0; i < NN; i++)
         {
             root[i + NN] = z;
             z = z * (ll)ROOT % mod;
@@ -23,12 +23,15 @@ namespace fft
 
     void fft(int *a, int *f)
     {
-        forn(i, N) f[i] = a[rev[i]];
-        for (int k = 1; k < N; k <<= 1) for (int i = 0; i < N; i += 2 * k) forn(j, k)
-        {
-            int z = f[i + j + k] * (ll)root[j + k] % mod;
-            f[i + j + k] = (f[i + j] - z + mod) % mod;
-            f[i + j] = (f[i + j] + z) % mod;
+        for (int i = 0; i < N; i++) f[i] = a[rev[i]];
+        for (int k = 1; k < N; k <<= 1) {
+            for (int i = 0; i < N; i += 2 * k) { 
+                for (int j = 0; j < k; j++) {
+                    int z = f[i + j + k] * (ll)root[j + k] % mod;
+                    f[i + j + k] = (f[i + j] - z + mod) % mod;
+                    f[i + j] = (f[i + j] + z) % mod;
+                }
+            }
         }
     }
 
@@ -38,10 +41,12 @@ namespace fft
     void _mult(int eq)
     {
         fft(A, F);
-        if (eq) forn(i, N) G[i] = F[i];
+        if (eq)
+            for (int i = 0; i < N; i++) 
+                G[i] = F[i];
         else fft(B, G);
         int invN = inv(N);
-        forn(i, N) A[i] = F[i] * (ll)G[i] % mod * invN % mod;
+        for (int i = 0; i < N; i++) A[i] = F[i] * (ll)G[i] % mod * invN % mod;
         reverse(A + 1, A + N);
         fft(A, C);
     }
