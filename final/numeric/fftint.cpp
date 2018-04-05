@@ -7,7 +7,7 @@ namespace fft {
     int root[N];
     int rev[N];
 
-    ll inv(ll a, ll m = mod) {
+    ll inv(ll a, ll m = MOD) {
         if (a == 0) return 0;
         return ((1 - inv(m % a, a) * m) / a + m) % m;
     }
