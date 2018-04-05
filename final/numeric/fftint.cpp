@@ -1,5 +1,4 @@
-namespace fft
-{
+namespace fft {
     const int mod = 998244353;
     const int base = 20;
     const int N = 1 << base;
@@ -8,21 +7,23 @@ namespace fft
     int root[N];
     int rev[N];
 
-    void init()
-    {
+    ll inv(ll a, ll m = mod) {
+        if (a == 0) return 0;
+        return ((1 - inv(m % a, a) * m) / a + m) % m;
+    }
+
+    void init() {
         for (int i = 0; i < N; i++) rev[i] = (rev[i >> 1] >> 1) + ((i & 1) << (base - 1));
         int NN = N >> 1;
         int z = 1;
-        for (int i = 0; i < NN; i++)
-        {
+        for (int i = 0; i < NN; i++) {
             root[i + NN] = z;
             z = z * (ll)ROOT % mod;
         }
         for (int i = NN - 1; i > 0; --i) root[i] = root[2 * i];
     }
 
-    void fft(int *a, int *f)
-    {
+    void fft(int *a, int *f) {
         for (int i = 0; i < N; i++) f[i] = a[rev[i]];
         for (int k = 1; k < N; k <<= 1) {
             for (int i = 0; i < N; i += 2 * k) { 
@@ -38,8 +39,7 @@ namespace fft
     int A[N], B[N], C[N];
     int F[N], G[N];
 
-    void _mult(int eq)
-    {
+    void _mult(int eq) {
         fft(A, F);
         if (eq)
             for (int i = 0; i < N; i++) 
@@ -51,8 +51,7 @@ namespace fft
         fft(A, C);
     }
 
-    void mult(int n1, int n2, int eq = 0)
-    {
+    void mult(int n1, int n2, int eq = 0) {
         for (int i = n1; i < N; ++i) A[i] = 0;
         for (int i = n2; i < N; ++i) B[i] = 0;
 
