@@ -1,5 +1,5 @@
 namespace fft {
-    const int mod = 998244353;
+    const int MOD = 998244353;
     const int base = 20;
     const int N = 1 << base;
     const int ROOT = 646;
