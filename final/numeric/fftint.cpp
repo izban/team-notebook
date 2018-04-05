@@ -18,7 +18,7 @@ namespace fft {
         int z = 1;
         for (int i = 0; i < NN; i++) {
             root[i + NN] = z;
-            z = z * (ll)ROOT % mod;
+            z = z * (ll)ROOT % MOD;
         }
         for (int i = NN - 1; i > 0; --i) root[i] = root[2 * i];
     }
@@ -28,9 +28,9 @@ namespace fft {
         for (int k = 1; k < N; k <<= 1) {
             for (int i = 0; i < N; i += 2 * k) { 
                 for (int j = 0; j < k; j++) {
-                    int z = f[i + j + k] * (ll)root[j + k] % mod;
-                    f[i + j + k] = (f[i + j] - z + mod) % mod;
-                    f[i + j] = (f[i + j] + z) % mod;
+                    int z = f[i + j + k] * (ll)root[j + k] % MOD;
+                    f[i + j + k] = (f[i + j] - z + MOD) % MOD;
+                    f[i + j] = (f[i + j] + z) % MOD;
                 }
             }
         }
@@ -46,7 +46,7 @@ namespace fft {
                 G[i] = F[i];
         else fft(B, G);
         int invN = inv(N);
-        for (int i = 0; i < N; i++) A[i] = F[i] * (ll)G[i] % mod * invN % mod;
+        for (int i = 0; i < N; i++) A[i] = F[i] * (ll)G[i] % MOD * invN % MOD;
         reverse(A + 1, A + N);
         fft(A, C);
     }
