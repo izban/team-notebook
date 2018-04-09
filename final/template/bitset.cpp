@@ -1,3 +1,8 @@
+
+const int SZ = 6;
+const int BASE = pw(SZ);
+const int MOD = BASE - 1;
+
 struct Bitset {
     typedef unsigned long long T;
     vector<T> data;
