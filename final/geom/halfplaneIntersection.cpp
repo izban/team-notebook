@@ -1,4 +1,3 @@
-
 int getPart(pt v) {
     return ls(v.y, 0) || (eq(0, v.y) && ls(v.x, 0));
 }
