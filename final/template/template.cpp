@@ -1,4 +1,4 @@
-// team : SPb ITMO University 1
+// team : Jump Training
 #include <bits/stdc++.h>
 
 #define F first
